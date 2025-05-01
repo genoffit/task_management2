@@ -1,0 +1,293 @@
+/* Google Fonts Import (əgər header.php-də yoxdursa) */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:400,500,700&display=swap&subset=latin-ext');
+
+/* TT-yə uyğun əsas stillər */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f7fa; /* TT: Açıq boz fon */
+    color: #333333; /* TT: Tünd boz mətn */
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .sidebar .nav-link, .navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500; /* Başlıqlar üçün daha qalın */
+}
+
+a {
+    color: #3a7bd5; /* TT: Əsas mavi rəng */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3; /* Mavinin daha tünd tonu */
+    text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: stretch; /* Sidebar və content hündürlüyünü bərabərləşdirir */
+}
+
+/* -------------------- Sidebar Stilləri -------------------- */
+.sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #343a40; /* TT: Tünd fon (Bootstrap dark rənginə yaxın) */
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar .sidebar-header {
+    padding: 1.5rem 1.25rem; /* Biraz daha çox boşluq */
+    background: #2c3136; /* TT: Biraz daha tünd */
+    text-align: center;
+    border-bottom: 1px solid #495057; /* Ayırıcı xətt */
+}
+
+.sidebar .sidebar-header h3 {
+    color: #fff;
+    margin-bottom: 0;
+    font-size: 1.5rem; /* Biraz böyük */
+}
+
+.sidebar .nav-link {
+    padding: 0.8rem 1.25rem; /* Rahat klik üçün boşluq */
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    border-left: 4px solid transparent; /* Aktivlik üçün yer */
+    transition: all 0.2s ease-in-out;
+    display: flex; /* İkon və mətni düzgün hizalamaq üçün */
+    align-items: center;
+}
+
+.sidebar .nav-link i.fa-fw { /* FontAwesome fixed width ikonlar */
+    width: 1.5em; /* İkonlar üçün sabit en */
+    margin-right: 0.75rem; /* İkon və mətn arası boşluq */
+    text-align: center;
+}
+
+
+.sidebar .nav-link:hover {
+    color: #ffffff;
+    background: #495057;
+    border-left-color: #00d2ff; /* TT: İkinci dərəcəli açıq mavi */
+}
+
+.sidebar .nav-link.active {
+    color: #ffffff;
+    background: #495057; /* Və ya biraz daha açıq #5a6268 */
+    border-left-color: #3a7bd5; /* TT: Əsas mavi rəng */
+    font-weight: 500; /* Roboto üçün 500 */
+}
+
+/* -------------------- Content və Navbar Stilləri -------------------- */
+.content {
+    width: 100%;
+    padding: 0;
+    min-height: 100vh;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f7fa; /* TT: Açıq boz fon */
+}
+
+.navbar {
+     background-color: #ffffff; /* TT: Ağ fon */
+     border-bottom: 1px solid #e3e6f0; /* Zərif ayırıcı */
+     box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important; /* Daha nəzərəçarpan kölgə */
+     padding-top: 0.75rem;
+     padding-bottom: 0.75rem;
+}
+
+/* Navbar Dropdown */
+.navbar .nav-item .nav-link {
+    color: #666666; /* TT: Orta boz */
+}
+.navbar .nav-item .nav-link:hover {
+    color: #333333; /* TT: Tünd boz */
+}
+.navbar .dropdown-menu {
+    border: 1px solid #e3e6f0;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.navbar .dropdown-item {
+    font-size: 0.9rem;
+    color: #333333;
+}
+.navbar .dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+.navbar .dropdown-item:active {
+    background-color: #e9ecef;
+}
+
+
+.main-content {
+     flex-grow: 1;
+     padding: 1.5rem; /* Məzmun üçün boşluq */
+}
+
+.footer {
+    background-color: #ffffff; /* Ağ fon */
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-size: 0.85em;
+    color: #858796; /* Daha açıq boz */
+    margin-top: auto;
+    border-top: 1px solid #e3e6f0;
+}
+
+/* -------------------- Dashboard Kartları -------------------- */
+.card {
+    border: none; /* Çərçivəni qaldır */
+    border-radius: 0.5rem; /* Daha yumşaq künclər */
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important; /* Navbar ilə eyni kölgə */
+    margin-bottom: 1.5rem; /* Kartlar arası boşluq */
+}
+
+.card .card-body {
+    padding: 1.25rem;
+}
+
+.card .card-header {
+    background-color: #ffffff; /* Ağ fon */
+    border-bottom: 1px solid #e3e6f0;
+    padding: 0.75rem 1.25rem;
+    font-weight: 700; /* Roboto üçün 700 */
+    color: #3a7bd5; /* TT: Əsas mavi */
+}
+
+/* Dashboard Statistika Kartları üçün Əlavə Stillər */
+.stat-card .card-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stat-card .text-xs {
+    font-size: 0.75rem; /* Kiçik mətn */
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.stat-card .h5 {
+    font-size: 1.5rem; /* Rəqəmlər üçün böyük ölçü */
+    font-weight: 700;
+    color: #5a5c69; /* Biraz daha tünd boz */
+}
+
+.stat-card .icon-circle {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+/* Rənglər (Bootstrap rənglərini istifadə edə bilərik və ya TT rənglərini) */
+.text-primary { color: #3a7bd5 !important; }
+.border-left-primary { border-left: 0.25rem solid #3a7bd5 !important; }
+.icon-circle-primary { background-color: #3a7bd5; }
+
+.text-success { color: #1cc88a !important; } /* Bootstrap success */
+.border-left-success { border-left: 0.25rem solid #1cc88a !important; }
+.icon-circle-success { background-color: #1cc88a; }
+
+.text-info { color: #36b9cc !important; } /* Bootstrap info */
+.border-left-info { border-left: 0.25rem solid #36b9cc !important; }
+.icon-circle-info { background-color: #36b9cc; }
+
+.text-warning { color: #f6c23e !important; } /* Bootstrap warning */
+.border-left-warning { border-left: 0.25rem solid #f6c23e !important; }
+.icon-circle-warning { background-color: #f6c23e; }
+
+.text-danger { color: #e74a3b !important; } /* Bootstrap danger */
+.border-left-danger { border-left: 0.25rem solid #e74a3b !important; }
+.icon-circle-danger { background-color: #e74a3b; }
+
+.text-secondary { color: #858796 !important; } /* Bootstrap secondary */
+.border-left-secondary { border-left: 0.25rem solid #858796 !important; }
+.icon-circle-secondary { background-color: #858796; }
+
+
+/* -------------------- Responsivlik -------------------- */
+@media (max-width: 768px) {
+    .sidebar {
+        margin-left: -250px;
+        position: fixed; /* Mobil cihazlarda sabit qalsın */
+        height: 100vh;
+        z-index: 999;
+        top: 0;
+        left: 0;
+    }
+    .sidebar.active {
+        margin-left: 0;
+    }
+    /* Overlay (Sidebar açıq olduqda arxa fonu tündləşdirir) */
+    .overlay {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 998;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+    .overlay.active {
+        display: block;
+        opacity: 1;
+    }
+
+    /* Navbar-dakı toggle düyməsi */
+    #sidebarCollapse {
+        display: inline-block !important; /* Görünən et */
+        background: #3a7bd5;
+        border: none;
+        color: #fff;
+    }
+     #sidebarCollapse:hover {
+         background: #0056b3;
+     }
+
+    .main-content {
+        padding: 1rem; /* Mobil üçün daha az boşluq */
+    }
+}
+
+@media (min-width: 769px) {
+    #sidebarCollapse {
+        display: none !important; /* Böyük ekranlarda gizlət */
+    }
+}
+/* Yeni əlavə olunan tapşırıq sətrini vurğulamaq üçün */
+@keyframes highlight-new-row {
+    from { background-color: #fcf8e3; } /* Açıq sarı */
+    to { background-color: transparent; }
+}
+
+.new-task-highlight {
+    animation: highlight-new-row 1.5s ease-out forwards;
+}
+
+/* Bildiriş zəngi üçün animasiya (əgər istifadə olunursa) */
+.notification-bell.notification-received i {
+    animation: ring-bell 0.8s ease-in-out;
+}
+
+@keyframes ring-bell {
+  0% { transform: rotate(0); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0); }
+  100% { transform: rotate(0); }
+}
